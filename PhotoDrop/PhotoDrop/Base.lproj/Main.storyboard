@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zcu-zh-Ckl">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Text Read View Controller-->
+        <scene sceneID="XfY-8v-tkh">
+            <objects>
+                <viewController id="Zcu-zh-Ckl" customClass="TextReadViewController" customModule="PhotoDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ulX-tD-stJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="duj-BL-Orz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lso-4s-Iuf">
+                                <rect key="frame" x="274" y="538" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="rE6-N1-l71" kind="show" identifier="toAR" id="Itq-1N-VU7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="leading" secondItem="gaB-Ca-cMQ" secondAttribute="leading" id="38v-d4-nh3"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="bottom" secondItem="gaB-Ca-cMQ" secondAttribute="bottom" id="9TJ-bc-Nnq"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="trailing" secondItem="gaB-Ca-cMQ" secondAttribute="trailing" id="Dkh-ZP-058"/>
+                            <constraint firstItem="duj-BL-Orz" firstAttribute="top" secondItem="ulX-tD-stJ" secondAttribute="top" id="vUS-t5-IMn"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gaB-Ca-cMQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="duj-BL-Orz" id="mbh-g1-Avq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rJ1-RM-b1N" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="990" y="142.6056338028169"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="O8T-62-j6N">
+            <objects>
+                <viewController id="rE6-N1-l71" customClass="ARViewController" customModule="PhotoDrop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rVS-ui-7kE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arskView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tGs-Wq-NfX">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </arskView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="tGs-Wq-NfX" firstAttribute="top" secondItem="cZL-s3-LN3" secondAttribute="top" id="ADe-yB-o6n"/>
+                            <constraint firstItem="tGs-Wq-NfX" firstAttribute="leading" secondItem="cZL-s3-LN3" secondAttribute="leading" id="FKR-Aa-CKW"/>
+                            <constraint firstItem="cZL-s3-LN3" firstAttribute="bottom" secondItem="tGs-Wq-NfX" secondAttribute="bottom" id="c8Z-x2-knv"/>
+                            <constraint firstItem="cZL-s3-LN3" firstAttribute="trailing" secondItem="tGs-Wq-NfX" secondAttribute="trailing" id="trQ-rn-Ne8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cZL-s3-LN3"/>
+                    </view>
+                    <connections>
+                        <outlet property="sceneView" destination="tGs-Wq-NfX" id="53T-6t-DTI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="38A-pG-NsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1845" y="142.6056338028169"/>
+        </scene>
+    </scenes>
+</document>
